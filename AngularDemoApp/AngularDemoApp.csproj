@@ -171,11 +171,10 @@
     <Content Include="js\DialogTestCtrl.js" />
     <Content Include="js\factorys.js" />
     <Content Include="js\SimpleModalCtrl.js" />
+    <Content Include="js\TableTestCtrl.js" />
     <Content Include="js\UploadTestCtrl.js" />
     <Content Include="js\warpper.js" />
     <Content Include="lib\angular-ui-date\date.js" />
-    <Content Include="lib\angular-ui-ng-grid\ng-grid-2.0.7.debug.js" />
-    <Content Include="lib\angular-ui-ng-grid\ng-grid.css" />
     <Content Include="lib\angular-ui-select2\select2.js" />
     <Content Include="lib\angularjs-modal-service\createDialog.js" />
     <Content Include="lib\angular\angular-animate.js" />
@@ -763,6 +762,9 @@
     <Content Include="lib\jquery-ui\themes\bootstrap\jquery.ui.1.9.2.ie.css" />
     <Content Include="lib\jquery\jquery.js" />
     <Content Include="lib\moment\moment-with-langs.js" />
+    <Content Include="lib\ng-table\ng-table.css" />
+    <Content Include="lib\ng-table\ng-table.js" />
+    <Content Include="lib\ng-table\ng-table.src.js" />
     <Content Include="lib\pqgrid\images\cross.png" />
     <Content Include="lib\pqgrid\images\horiz-bg.png" />
     <Content Include="lib\pqgrid\images\horiz-slider-bg.png" />
@@ -798,6 +800,7 @@
     <Content Include="lib\toastr\toastr.min.js" />
     <Content Include="partials\dialogtest.html" />
     <Content Include="partials\simpleModal.html" />
+    <Content Include="partials\tabletest.html" />
     <Content Include="partials\uploadtest.html" />
     <Content Include="style\bootstrap.css" />
     <Content Include="style\warpper.css" />

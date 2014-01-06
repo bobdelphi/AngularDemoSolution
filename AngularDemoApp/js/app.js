@@ -6,6 +6,7 @@ angular.module('ngApp', [
 'ui.date',
 'ui.select2',
 //'ngGrid',
+  'ngTable',
   'ngRoute',
   'blueimp.fileupload',
   'fundoo.services',
@@ -17,6 +18,7 @@ angular.module('ngApp', [
 config(['$routeProvider', function ($routeProvider) {
     $routeProvider.when('/uploadtest', { templateUrl: 'partials/uploadtest.html', controller: 'UploadTestCtrl' });
     $routeProvider.when('/dialogtest', { templateUrl: 'partials/dialogtest.html', controller: 'DialogTestCtrl' });
+    $routeProvider.when('/tabletest', { templateUrl: 'partials/tabletest.html', controller: 'TableTestCtrl' });
     $routeProvider.otherwise({ redirectTo: '/view1' });
 
 } ]).
