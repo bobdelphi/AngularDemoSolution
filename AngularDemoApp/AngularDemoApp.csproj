@@ -1,0 +1,876 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{63907FB2-11ED-4BB3-9025-921404A29C57}</ProjectGuid>
+    <ProjectTypeGuids>{E3E379DF-F4C6-4180-9B81-6769533ABE47};{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AngularDemoApp</RootNamespace>
+    <AssemblyName>AngularDemoApp</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>false</UseIISExpress>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.4.5.6\lib\net40\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Net.Http.2.0.20710.0\lib\net40\System.Net.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.Formatting, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.4.0.20710.0\lib\net40\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Net.Http.2.0.20710.0\lib\net40\System.Net.Http.WebRequest.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.4.0.20710.0\lib\net40\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.4.0.20710.0\lib\net40\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.4.0.20710.0\lib\net40\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.0.0\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Providers">
+      <HintPath>..\packages\Microsoft.AspNet.Providers.Core.1.1\lib\net40\System.Web.Providers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.2.0.20710.0\lib\net40\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.1.0\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.1.0\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Ashx\UploadHandler.ashx.cs">
+      <DependentUpon>UploadHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Ashx\UserJsHandler.ashx.cs">
+      <DependentUpon>UserJsHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\ValuesController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Model\FilesStatus.cs" />
+    <Compile Include="Model\UserInfor.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="favicon.ico" />
+    <Content Include="Global.asax" />
+    <Content Include="images\arrow.png" />
+    <Content Include="images\bg_btn.png" />
+    <Content Include="images\bg_btn_01.png" />
+    <Content Include="images\bg_btn_02.png" />
+    <Content Include="images\bg_content.png" />
+    <Content Include="images\bg_msgbox.gif" />
+    <Content Include="images\bg_navdept.png" />
+    <Content Include="images\bg_navigation.png" />
+    <Content Include="images\bg_navigation2.png" />
+    <Content Include="images\bg_navlist.png" />
+    <Content Include="images\bg_top.png" />
+    <Content Include="images\bg_warpper.png" />
+    <Content Include="images\btn_add.png" />
+    <Content Include="images\btn_setting.png" />
+    <Content Include="images\btn_switch.png" />
+    <Content Include="images\bt_btn_nav.png" />
+    <Content Include="images\copyright.gif" />
+    <Content Include="images\drop.png" />
+    <Content Include="images\drop2.png" />
+    <Content Include="images\icon_navall.png" />
+    <Content Include="images\infoicon.png" />
+    <Content Include="images\input_icon.png" />
+    <Content Include="images\login_shadow.png" />
+    <Content Include="images\logo.png" />
+    <Content Include="images\nav2.png" />
+    <Content Include="images\navbtn.png" />
+    <Content Include="images\nav_btn2.png" />
+    <Content Include="images\nav_btn2_on.png" />
+    <Content Include="js\app.js" />
+    <Content Include="js\common.js" />
+    <Content Include="js\controllers.js" />
+    <Content Include="js\DialogTestCtrl.js" />
+    <Content Include="js\factorys.js" />
+    <Content Include="js\SimpleModalCtrl.js" />
+    <Content Include="js\UploadTestCtrl.js" />
+    <Content Include="js\warpper.js" />
+    <Content Include="lib\angular-ui-date\date.js" />
+    <Content Include="lib\angular-ui-ng-grid\ng-grid-2.0.7.debug.js" />
+    <Content Include="lib\angular-ui-ng-grid\ng-grid.css" />
+    <Content Include="lib\angular-ui-select2\select2.js" />
+    <Content Include="lib\angularjs-modal-service\createDialog.js" />
+    <Content Include="lib\angular\angular-animate.js" />
+    <Content Include="lib\angular\angular-animate.min.js" />
+    <Content Include="lib\angular\angular-cookies.js" />
+    <Content Include="lib\angular\angular-cookies.min.js" />
+    <Content Include="lib\angular\angular-loader.js" />
+    <Content Include="lib\angular\angular-loader.min.js" />
+    <Content Include="lib\angular\angular-resource.js" />
+    <Content Include="lib\angular\angular-resource.min.js" />
+    <Content Include="lib\angular\angular-route.js" />
+    <Content Include="lib\angular\angular-route.min.js" />
+    <Content Include="lib\angular\angular-sanitize.js" />
+    <Content Include="lib\angular\angular-sanitize.min.js" />
+    <Content Include="lib\angular\angular-touch.js" />
+    <Content Include="lib\angular\angular-touch.min.js" />
+    <Content Include="lib\angular\angular.js" />
+    <Content Include="lib\angular\angular.min.js" />
+    <Content Include="lib\angular\i18n\angular-locale_af-na.js" />
+    <Content Include="lib\angular\i18n\angular-locale_af-za.js" />
+    <Content Include="lib\angular\i18n\angular-locale_af.js" />
+    <Content Include="lib\angular\i18n\angular-locale_am-et.js" />
+    <Content Include="lib\angular\i18n\angular-locale_am.js" />
+    <Content Include="lib\angular\i18n\angular-locale_ar-001.js" />
+    <Content Include="lib\angular\i18n\angular-locale_ar-ae.js" />
+    <Content Include="lib\angular\i18n\angular-locale_ar-bh.js" />
+    <Content Include="lib\angular\i18n\angular-locale_ar-dz.js" />
+    <Content Include="lib\angular\i18n\angular-locale_ar-eg.js" />
+    <Content Include="lib\angular\i18n\angular-locale_ar-iq.js" />
+    <Content Include="lib\angular\i18n\angular-locale_ar-jo.js" />
+    <Content Include="lib\angular\i18n\angular-locale_ar-kw.js" />
+    <Content Include="lib\angular\i18n\angular-locale_ar-lb.js" />
+    <Content Include="lib\angular\i18n\angular-locale_ar-ly.js" />
+    <Content Include="lib\angular\i18n\angular-locale_ar-ma.js" />
+    <Content Include="lib\angular\i18n\angular-locale_ar-om.js" />
+    <Content Include="lib\angular\i18n\angular-locale_ar-qa.js" />
+    <Content Include="lib\angular\i18n\angular-locale_ar-sa.js" />
+    <Content Include="lib\angular\i18n\angular-locale_ar-sd.js" />
+    <Content Include="lib\angular\i18n\angular-locale_ar-sy.js" />
+    <Content Include="lib\angular\i18n\angular-locale_ar-tn.js" />
+    <Content Include="lib\angular\i18n\angular-locale_ar-ye.js" />
+    <Content Include="lib\angular\i18n\angular-locale_ar.js" />
+    <Content Include="lib\angular\i18n\angular-locale_bg-bg.js" />
+    <Content Include="lib\angular\i18n\angular-locale_bg.js" />
+    <Content Include="lib\angular\i18n\angular-locale_bn-bd.js" />
+    <Content Include="lib\angular\i18n\angular-locale_bn-in.js" />
+    <Content Include="lib\angular\i18n\angular-locale_bn.js" />
+    <Content Include="lib\angular\i18n\angular-locale_ca-ad.js" />
+    <Content Include="lib\angular\i18n\angular-locale_ca-es.js" />
+    <Content Include="lib\angular\i18n\angular-locale_ca.js" />
+    <Content Include="lib\angular\i18n\angular-locale_cs-cz.js" />
+    <Content Include="lib\angular\i18n\angular-locale_cs.js" />
+    <Content Include="lib\angular\i18n\angular-locale_da-dk.js" />
+    <Content Include="lib\angular\i18n\angular-locale_da.js" />
+    <Content Include="lib\angular\i18n\angular-locale_de-at.js" />
+    <Content Include="lib\angular\i18n\angular-locale_de-be.js" />
+    <Content Include="lib\angular\i18n\angular-locale_de-ch.js" />
+    <Content Include="lib\angular\i18n\angular-locale_de-de.js" />
+    <Content Include="lib\angular\i18n\angular-locale_de-li.js" />
+    <Content Include="lib\angular\i18n\angular-locale_de-lu.js" />
+    <Content Include="lib\angular\i18n\angular-locale_de.js" />
+    <Content Include="lib\angular\i18n\angular-locale_el-cy.js" />
+    <Content Include="lib\angular\i18n\angular-locale_el-gr.js" />
+    <Content Include="lib\angular\i18n\angular-locale_el.js" />
+    <Content Include="lib\angular\i18n\angular-locale_en-as.js" />
+    <Content Include="lib\angular\i18n\angular-locale_en-au.js" />
+    <Content Include="lib\angular\i18n\angular-locale_en-bb.js" />
+    <Content Include="lib\angular\i18n\angular-locale_en-be.js" />
+    <Content Include="lib\angular\i18n\angular-locale_en-bm.js" />
+    <Content Include="lib\angular\i18n\angular-locale_en-bw.js" />
+    <Content Include="lib\angular\i18n\angular-locale_en-bz.js" />
+    <Content Include="lib\angular\i18n\angular-locale_en-ca.js" />
+    <Content Include="lib\angular\i18n\angular-locale_en-dsrt-us.js" />
+    <Content Include="lib\angular\i18n\angular-locale_en-dsrt.js" />
+    <Content Include="lib\angular\i18n\angular-locale_en-fm.js" />
+    <Content Include="lib\angular\i18n\angular-locale_en-gb.js" />
+    <Content Include="lib\angular\i18n\angular-locale_en-gu.js" />
+    <Content Include="lib\angular\i18n\angular-locale_en-gy.js" />
+    <Content Include="lib\angular\i18n\angular-locale_en-hk.js" />
+    <Content Include="lib\angular\i18n\angular-locale_en-ie.js" />
+    <Content Include="lib\angular\i18n\angular-locale_en-in.js" />
+    <Content Include="lib\angular\i18n\angular-locale_en-iso.js" />
+    <Content Include="lib\angular\i18n\angular-locale_en-jm.js" />
+    <Content Include="lib\angular\i18n\angular-locale_en-mh.js" />
+    <Content Include="lib\angular\i18n\angular-locale_en-mp.js" />
+    <Content Include="lib\angular\i18n\angular-locale_en-mt.js" />
+    <Content Include="lib\angular\i18n\angular-locale_en-mu.js" />
+    <Content Include="lib\angular\i18n\angular-locale_en-na.js" />
+    <Content Include="lib\angular\i18n\angular-locale_en-nz.js" />
+    <Content Include="lib\angular\i18n\angular-locale_en-ph.js" />
+    <Content Include="lib\angular\i18n\angular-locale_en-pk.js" />
+    <Content Include="lib\angular\i18n\angular-locale_en-pr.js" />
+    <Content Include="lib\angular\i18n\angular-locale_en-pw.js" />
+    <Content Include="lib\angular\i18n\angular-locale_en-sg.js" />
+    <Content Include="lib\angular\i18n\angular-locale_en-tc.js" />
+    <Content Include="lib\angular\i18n\angular-locale_en-tt.js" />
+    <Content Include="lib\angular\i18n\angular-locale_en-um.js" />
+    <Content Include="lib\angular\i18n\angular-locale_en-us.js" />
+    <Content Include="lib\angular\i18n\angular-locale_en-vg.js" />
+    <Content Include="lib\angular\i18n\angular-locale_en-vi.js" />
+    <Content Include="lib\angular\i18n\angular-locale_en-za.js" />
+    <Content Include="lib\angular\i18n\angular-locale_en-zw.js" />
+    <Content Include="lib\angular\i18n\angular-locale_en.js" />
+    <Content Include="lib\angular\i18n\angular-locale_es-419.js" />
+    <Content Include="lib\angular\i18n\angular-locale_es-ar.js" />
+    <Content Include="lib\angular\i18n\angular-locale_es-bo.js" />
+    <Content Include="lib\angular\i18n\angular-locale_es-cl.js" />
+    <Content Include="lib\angular\i18n\angular-locale_es-co.js" />
+    <Content Include="lib\angular\i18n\angular-locale_es-cr.js" />
+    <Content Include="lib\angular\i18n\angular-locale_es-do.js" />
+    <Content Include="lib\angular\i18n\angular-locale_es-ea.js" />
+    <Content Include="lib\angular\i18n\angular-locale_es-ec.js" />
+    <Content Include="lib\angular\i18n\angular-locale_es-es.js" />
+    <Content Include="lib\angular\i18n\angular-locale_es-gq.js" />
+    <Content Include="lib\angular\i18n\angular-locale_es-gt.js" />
+    <Content Include="lib\angular\i18n\angular-locale_es-hn.js" />
+    <Content Include="lib\angular\i18n\angular-locale_es-ic.js" />
+    <Content Include="lib\angular\i18n\angular-locale_es-mx.js" />
+    <Content Include="lib\angular\i18n\angular-locale_es-ni.js" />
+    <Content Include="lib\angular\i18n\angular-locale_es-pa.js" />
+    <Content Include="lib\angular\i18n\angular-locale_es-pe.js" />
+    <Content Include="lib\angular\i18n\angular-locale_es-pr.js" />
+    <Content Include="lib\angular\i18n\angular-locale_es-py.js" />
+    <Content Include="lib\angular\i18n\angular-locale_es-sv.js" />
+    <Content Include="lib\angular\i18n\angular-locale_es-us.js" />
+    <Content Include="lib\angular\i18n\angular-locale_es-uy.js" />
+    <Content Include="lib\angular\i18n\angular-locale_es-ve.js" />
+    <Content Include="lib\angular\i18n\angular-locale_es.js" />
+    <Content Include="lib\angular\i18n\angular-locale_et-ee.js" />
+    <Content Include="lib\angular\i18n\angular-locale_et.js" />
+    <Content Include="lib\angular\i18n\angular-locale_eu-es.js" />
+    <Content Include="lib\angular\i18n\angular-locale_eu.js" />
+    <Content Include="lib\angular\i18n\angular-locale_fa-af.js" />
+    <Content Include="lib\angular\i18n\angular-locale_fa-ir.js" />
+    <Content Include="lib\angular\i18n\angular-locale_fa.js" />
+    <Content Include="lib\angular\i18n\angular-locale_fi-fi.js" />
+    <Content Include="lib\angular\i18n\angular-locale_fi.js" />
+    <Content Include="lib\angular\i18n\angular-locale_fil-ph.js" />
+    <Content Include="lib\angular\i18n\angular-locale_fil.js" />
+    <Content Include="lib\angular\i18n\angular-locale_fr-be.js" />
+    <Content Include="lib\angular\i18n\angular-locale_fr-bf.js" />
+    <Content Include="lib\angular\i18n\angular-locale_fr-bi.js" />
+    <Content Include="lib\angular\i18n\angular-locale_fr-bj.js" />
+    <Content Include="lib\angular\i18n\angular-locale_fr-bl.js" />
+    <Content Include="lib\angular\i18n\angular-locale_fr-ca.js" />
+    <Content Include="lib\angular\i18n\angular-locale_fr-cd.js" />
+    <Content Include="lib\angular\i18n\angular-locale_fr-cf.js" />
+    <Content Include="lib\angular\i18n\angular-locale_fr-cg.js" />
+    <Content Include="lib\angular\i18n\angular-locale_fr-ch.js" />
+    <Content Include="lib\angular\i18n\angular-locale_fr-ci.js" />
+    <Content Include="lib\angular\i18n\angular-locale_fr-cm.js" />
+    <Content Include="lib\angular\i18n\angular-locale_fr-dj.js" />
+    <Content Include="lib\angular\i18n\angular-locale_fr-fr.js" />
+    <Content Include="lib\angular\i18n\angular-locale_fr-ga.js" />
+    <Content Include="lib\angular\i18n\angular-locale_fr-gf.js" />
+    <Content Include="lib\angular\i18n\angular-locale_fr-gn.js" />
+    <Content Include="lib\angular\i18n\angular-locale_fr-gp.js" />
+    <Content Include="lib\angular\i18n\angular-locale_fr-gq.js" />
+    <Content Include="lib\angular\i18n\angular-locale_fr-km.js" />
+    <Content Include="lib\angular\i18n\angular-locale_fr-lu.js" />
+    <Content Include="lib\angular\i18n\angular-locale_fr-mc.js" />
+    <Content Include="lib\angular\i18n\angular-locale_fr-mf.js" />
+    <Content Include="lib\angular\i18n\angular-locale_fr-mg.js" />
+    <Content Include="lib\angular\i18n\angular-locale_fr-ml.js" />
+    <Content Include="lib\angular\i18n\angular-locale_fr-mq.js" />
+    <Content Include="lib\angular\i18n\angular-locale_fr-ne.js" />
+    <Content Include="lib\angular\i18n\angular-locale_fr-re.js" />
+    <Content Include="lib\angular\i18n\angular-locale_fr-yt.js" />
+    <Content Include="lib\angular\i18n\angular-locale_fr.js" />
+    <Content Include="lib\angular\i18n\angular-locale_gl-es.js" />
+    <Content Include="lib\angular\i18n\angular-locale_gl.js" />
+    <Content Include="lib\angular\i18n\angular-locale_gsw-ch.js" />
+    <Content Include="lib\angular\i18n\angular-locale_gsw.js" />
+    <Content Include="lib\angular\i18n\angular-locale_gu-in.js" />
+    <Content Include="lib\angular\i18n\angular-locale_gu.js" />
+    <Content Include="lib\angular\i18n\angular-locale_he-il.js" />
+    <Content Include="lib\angular\i18n\angular-locale_he.js" />
+    <Content Include="lib\angular\i18n\angular-locale_hi-in.js" />
+    <Content Include="lib\angular\i18n\angular-locale_hi.js" />
+    <Content Include="lib\angular\i18n\angular-locale_hr-hr.js" />
+    <Content Include="lib\angular\i18n\angular-locale_hr.js" />
+    <Content Include="lib\angular\i18n\angular-locale_hu-hu.js" />
+    <Content Include="lib\angular\i18n\angular-locale_hu.js" />
+    <Content Include="lib\angular\i18n\angular-locale_id-id.js" />
+    <Content Include="lib\angular\i18n\angular-locale_id.js" />
+    <Content Include="lib\angular\i18n\angular-locale_in.js" />
+    <Content Include="lib\angular\i18n\angular-locale_is-is.js" />
+    <Content Include="lib\angular\i18n\angular-locale_is.js" />
+    <Content Include="lib\angular\i18n\angular-locale_it-it.js" />
+    <Content Include="lib\angular\i18n\angular-locale_it-sm.js" />
+    <Content Include="lib\angular\i18n\angular-locale_it.js" />
+    <Content Include="lib\angular\i18n\angular-locale_iw.js" />
+    <Content Include="lib\angular\i18n\angular-locale_ja-jp.js" />
+    <Content Include="lib\angular\i18n\angular-locale_ja.js" />
+    <Content Include="lib\angular\i18n\angular-locale_kn-in.js" />
+    <Content Include="lib\angular\i18n\angular-locale_kn.js" />
+    <Content Include="lib\angular\i18n\angular-locale_ko-kr.js" />
+    <Content Include="lib\angular\i18n\angular-locale_ko.js" />
+    <Content Include="lib\angular\i18n\angular-locale_ln-cd.js" />
+    <Content Include="lib\angular\i18n\angular-locale_ln.js" />
+    <Content Include="lib\angular\i18n\angular-locale_lt-lt.js" />
+    <Content Include="lib\angular\i18n\angular-locale_lt.js" />
+    <Content Include="lib\angular\i18n\angular-locale_lv-lv.js" />
+    <Content Include="lib\angular\i18n\angular-locale_lv.js" />
+    <Content Include="lib\angular\i18n\angular-locale_ml-in.js" />
+    <Content Include="lib\angular\i18n\angular-locale_ml.js" />
+    <Content Include="lib\angular\i18n\angular-locale_mr-in.js" />
+    <Content Include="lib\angular\i18n\angular-locale_mr.js" />
+    <Content Include="lib\angular\i18n\angular-locale_ms-my.js" />
+    <Content Include="lib\angular\i18n\angular-locale_ms.js" />
+    <Content Include="lib\angular\i18n\angular-locale_mt-mt.js" />
+    <Content Include="lib\angular\i18n\angular-locale_mt.js" />
+    <Content Include="lib\angular\i18n\angular-locale_nl-cw.js" />
+    <Content Include="lib\angular\i18n\angular-locale_nl-nl.js" />
+    <Content Include="lib\angular\i18n\angular-locale_nl-sx.js" />
+    <Content Include="lib\angular\i18n\angular-locale_nl.js" />
+    <Content Include="lib\angular\i18n\angular-locale_no.js" />
+    <Content Include="lib\angular\i18n\angular-locale_or-in.js" />
+    <Content Include="lib\angular\i18n\angular-locale_or.js" />
+    <Content Include="lib\angular\i18n\angular-locale_pl-pl.js" />
+    <Content Include="lib\angular\i18n\angular-locale_pl.js" />
+    <Content Include="lib\angular\i18n\angular-locale_pt-br.js" />
+    <Content Include="lib\angular\i18n\angular-locale_pt-pt.js" />
+    <Content Include="lib\angular\i18n\angular-locale_pt.js" />
+    <Content Include="lib\angular\i18n\angular-locale_ro-ro.js" />
+    <Content Include="lib\angular\i18n\angular-locale_ro.js" />
+    <Content Include="lib\angular\i18n\angular-locale_ru-ru.js" />
+    <Content Include="lib\angular\i18n\angular-locale_ru.js" />
+    <Content Include="lib\angular\i18n\angular-locale_sk-sk.js" />
+    <Content Include="lib\angular\i18n\angular-locale_sk.js" />
+    <Content Include="lib\angular\i18n\angular-locale_sl-si.js" />
+    <Content Include="lib\angular\i18n\angular-locale_sl.js" />
+    <Content Include="lib\angular\i18n\angular-locale_sq-al.js" />
+    <Content Include="lib\angular\i18n\angular-locale_sq.js" />
+    <Content Include="lib\angular\i18n\angular-locale_sr-cyrl-rs.js" />
+    <Content Include="lib\angular\i18n\angular-locale_sr-latn-rs.js" />
+    <Content Include="lib\angular\i18n\angular-locale_sr.js" />
+    <Content Include="lib\angular\i18n\angular-locale_sv-se.js" />
+    <Content Include="lib\angular\i18n\angular-locale_sv.js" />
+    <Content Include="lib\angular\i18n\angular-locale_sw-tz.js" />
+    <Content Include="lib\angular\i18n\angular-locale_sw.js" />
+    <Content Include="lib\angular\i18n\angular-locale_ta-in.js" />
+    <Content Include="lib\angular\i18n\angular-locale_ta.js" />
+    <Content Include="lib\angular\i18n\angular-locale_te-in.js" />
+    <Content Include="lib\angular\i18n\angular-locale_te.js" />
+    <Content Include="lib\angular\i18n\angular-locale_th-th.js" />
+    <Content Include="lib\angular\i18n\angular-locale_th.js" />
+    <Content Include="lib\angular\i18n\angular-locale_tl.js" />
+    <Content Include="lib\angular\i18n\angular-locale_tr-tr.js" />
+    <Content Include="lib\angular\i18n\angular-locale_tr.js" />
+    <Content Include="lib\angular\i18n\angular-locale_uk-ua.js" />
+    <Content Include="lib\angular\i18n\angular-locale_uk.js" />
+    <Content Include="lib\angular\i18n\angular-locale_ur-pk.js" />
+    <Content Include="lib\angular\i18n\angular-locale_ur.js" />
+    <Content Include="lib\angular\i18n\angular-locale_vi-vn.js" />
+    <Content Include="lib\angular\i18n\angular-locale_vi.js" />
+    <Content Include="lib\angular\i18n\angular-locale_zh-cn.js" />
+    <Content Include="lib\angular\i18n\angular-locale_zh-hans-cn.js" />
+    <Content Include="lib\angular\i18n\angular-locale_zh-hk.js" />
+    <Content Include="lib\angular\i18n\angular-locale_zh-tw.js" />
+    <Content Include="lib\angular\i18n\angular-locale_zh.js" />
+    <Content Include="lib\angular\i18n\angular-locale_zu-za.js" />
+    <Content Include="lib\angular\i18n\angular-locale_zu.js" />
+    <Content Include="lib\angular\version.txt" />
+    <Content Include="lib\jquery-file-upload\app.js" />
+    <Content Include="lib\jquery-file-upload\cors\jquery.postmessage-transport.js" />
+    <Content Include="lib\jquery-file-upload\cors\jquery.xdr-transport.js" />
+    <Content Include="lib\jquery-file-upload\css\demo-ie8.css" />
+    <Content Include="lib\jquery-file-upload\css\demo.css" />
+    <Content Include="lib\jquery-file-upload\css\jquery.fileupload-noscript.css" />
+    <Content Include="lib\jquery-file-upload\css\jquery.fileupload-ui-noscript.css" />
+    <Content Include="lib\jquery-file-upload\css\jquery.fileupload-ui.css" />
+    <Content Include="lib\jquery-file-upload\css\jquery.fileupload.css" />
+    <Content Include="lib\jquery-file-upload\css\style.css" />
+    <Content Include="lib\jquery-file-upload\jquery.blueimp-gallery.min.js" />
+    <Content Include="lib\jquery-file-upload\jquery.fileupload-angular.js" />
+    <Content Include="lib\jquery-file-upload\jquery.fileupload-audio.js" />
+    <Content Include="lib\jquery-file-upload\jquery.fileupload-image.js" />
+    <Content Include="lib\jquery-file-upload\jquery.fileupload-jquery-ui.js" />
+    <Content Include="lib\jquery-file-upload\jquery.fileupload-process.js" />
+    <Content Include="lib\jquery-file-upload\jquery.fileupload-ui.js" />
+    <Content Include="lib\jquery-file-upload\jquery.fileupload-validate.js" />
+    <Content Include="lib\jquery-file-upload\jquery.fileupload-video.js" />
+    <Content Include="lib\jquery-file-upload\jquery.fileupload.js" />
+    <Content Include="lib\jquery-file-upload\jquery.iframe-transport.js" />
+    <Content Include="lib\jquery-file-upload\main.js" />
+    <Content Include="lib\jquery-file-upload\vendor\jquery.ui.widget.js" />
+    <Content Include="lib\jquery-ui\i18n\jquery-ui-i18n.js" />
+    <Content Include="lib\jquery-ui\i18n\jquery.ui.datepicker-af.js" />
+    <Content Include="lib\jquery-ui\i18n\jquery.ui.datepicker-ar-DZ.js" />
+    <Content Include="lib\jquery-ui\i18n\jquery.ui.datepicker-ar.js" />
+    <Content Include="lib\jquery-ui\i18n\jquery.ui.datepicker-az.js" />
+    <Content Include="lib\jquery-ui\i18n\jquery.ui.datepicker-be.js" />
+    <Content Include="lib\jquery-ui\i18n\jquery.ui.datepicker-bg.js" />
+    <Content Include="lib\jquery-ui\i18n\jquery.ui.datepicker-bs.js" />
+    <Content Include="lib\jquery-ui\i18n\jquery.ui.datepicker-ca.js" />
+    <Content Include="lib\jquery-ui\i18n\jquery.ui.datepicker-cs.js" />
+    <Content Include="lib\jquery-ui\i18n\jquery.ui.datepicker-cy-GB.js" />
+    <Content Include="lib\jquery-ui\i18n\jquery.ui.datepicker-da.js" />
+    <Content Include="lib\jquery-ui\i18n\jquery.ui.datepicker-de.js" />
+    <Content Include="lib\jquery-ui\i18n\jquery.ui.datepicker-el.js" />
+    <Content Include="lib\jquery-ui\i18n\jquery.ui.datepicker-en-AU.js" />
+    <Content Include="lib\jquery-ui\i18n\jquery.ui.datepicker-en-GB.js" />
+    <Content Include="lib\jquery-ui\i18n\jquery.ui.datepicker-en-NZ.js" />
+    <Content Include="lib\jquery-ui\i18n\jquery.ui.datepicker-eo.js" />
+    <Content Include="lib\jquery-ui\i18n\jquery.ui.datepicker-es.js" />
+    <Content Include="lib\jquery-ui\i18n\jquery.ui.datepicker-et.js" />
+    <Content Include="lib\jquery-ui\i18n\jquery.ui.datepicker-eu.js" />
+    <Content Include="lib\jquery-ui\i18n\jquery.ui.datepicker-fa.js" />
+    <Content Include="lib\jquery-ui\i18n\jquery.ui.datepicker-fi.js" />
+    <Content Include="lib\jquery-ui\i18n\jquery.ui.datepicker-fo.js" />
+    <Content Include="lib\jquery-ui\i18n\jquery.ui.datepicker-fr-CA.js" />
+    <Content Include="lib\jquery-ui\i18n\jquery.ui.datepicker-fr-CH.js" />
+    <Content Include="lib\jquery-ui\i18n\jquery.ui.datepicker-fr.js" />
+    <Content Include="lib\jquery-ui\i18n\jquery.ui.datepicker-gl.js" />
+    <Content Include="lib\jquery-ui\i18n\jquery.ui.datepicker-he.js" />
+    <Content Include="lib\jquery-ui\i18n\jquery.ui.datepicker-hi.js" />
+    <Content Include="lib\jquery-ui\i18n\jquery.ui.datepicker-hr.js" />
+    <Content Include="lib\jquery-ui\i18n\jquery.ui.datepicker-hu.js" />
+    <Content Include="lib\jquery-ui\i18n\jquery.ui.datepicker-hy.js" />
+    <Content Include="lib\jquery-ui\i18n\jquery.ui.datepicker-id.js" />
+    <Content Include="lib\jquery-ui\i18n\jquery.ui.datepicker-is.js" />
+    <Content Include="lib\jquery-ui\i18n\jquery.ui.datepicker-it.js" />
+    <Content Include="lib\jquery-ui\i18n\jquery.ui.datepicker-ja.js" />
+    <Content Include="lib\jquery-ui\i18n\jquery.ui.datepicker-ka.js" />
+    <Content Include="lib\jquery-ui\i18n\jquery.ui.datepicker-kk.js" />
+    <Content Include="lib\jquery-ui\i18n\jquery.ui.datepicker-km.js" />
+    <Content Include="lib\jquery-ui\i18n\jquery.ui.datepicker-ko.js" />
+    <Content Include="lib\jquery-ui\i18n\jquery.ui.datepicker-ky.js" />
+    <Content Include="lib\jquery-ui\i18n\jquery.ui.datepicker-lb.js" />
+    <Content Include="lib\jquery-ui\i18n\jquery.ui.datepicker-lt.js" />
+    <Content Include="lib\jquery-ui\i18n\jquery.ui.datepicker-lv.js" />
+    <Content Include="lib\jquery-ui\i18n\jquery.ui.datepicker-mk.js" />
+    <Content Include="lib\jquery-ui\i18n\jquery.ui.datepicker-ml.js" />
+    <Content Include="lib\jquery-ui\i18n\jquery.ui.datepicker-ms.js" />
+    <Content Include="lib\jquery-ui\i18n\jquery.ui.datepicker-nb.js" />
+    <Content Include="lib\jquery-ui\i18n\jquery.ui.datepicker-nl-BE.js" />
+    <Content Include="lib\jquery-ui\i18n\jquery.ui.datepicker-nl.js" />
+    <Content Include="lib\jquery-ui\i18n\jquery.ui.datepicker-nn.js" />
+    <Content Include="lib\jquery-ui\i18n\jquery.ui.datepicker-no.js" />
+    <Content Include="lib\jquery-ui\i18n\jquery.ui.datepicker-pl.js" />
+    <Content Include="lib\jquery-ui\i18n\jquery.ui.datepicker-pt-BR.js" />
+    <Content Include="lib\jquery-ui\i18n\jquery.ui.datepicker-pt.js" />
+    <Content Include="lib\jquery-ui\i18n\jquery.ui.datepicker-rm.js" />
+    <Content Include="lib\jquery-ui\i18n\jquery.ui.datepicker-ro.js" />
+    <Content Include="lib\jquery-ui\i18n\jquery.ui.datepicker-ru.js" />
+    <Content Include="lib\jquery-ui\i18n\jquery.ui.datepicker-sk.js" />
+    <Content Include="lib\jquery-ui\i18n\jquery.ui.datepicker-sl.js" />
+    <Content Include="lib\jquery-ui\i18n\jquery.ui.datepicker-sq.js" />
+    <Content Include="lib\jquery-ui\i18n\jquery.ui.datepicker-sr-SR.js" />
+    <Content Include="lib\jquery-ui\i18n\jquery.ui.datepicker-sr.js" />
+    <Content Include="lib\jquery-ui\i18n\jquery.ui.datepicker-sv.js" />
+    <Content Include="lib\jquery-ui\i18n\jquery.ui.datepicker-ta.js" />
+    <Content Include="lib\jquery-ui\i18n\jquery.ui.datepicker-th.js" />
+    <Content Include="lib\jquery-ui\i18n\jquery.ui.datepicker-tj.js" />
+    <Content Include="lib\jquery-ui\i18n\jquery.ui.datepicker-tr.js" />
+    <Content Include="lib\jquery-ui\i18n\jquery.ui.datepicker-uk.js" />
+    <Content Include="lib\jquery-ui\i18n\jquery.ui.datepicker-vi.js" />
+    <Content Include="lib\jquery-ui\i18n\jquery.ui.datepicker-zh-CN.js" />
+    <Content Include="lib\jquery-ui\i18n\jquery.ui.datepicker-zh-HK.js" />
+    <Content Include="lib\jquery-ui\i18n\jquery.ui.datepicker-zh-TW.js" />
+    <Content Include="lib\jquery-ui\jquery-ui.js" />
+    <Content Include="lib\jquery-ui\jquery.ui.accordion.js" />
+    <Content Include="lib\jquery-ui\jquery.ui.autocomplete.js" />
+    <Content Include="lib\jquery-ui\jquery.ui.button.js" />
+    <Content Include="lib\jquery-ui\jquery.ui.core.js" />
+    <Content Include="lib\jquery-ui\jquery.ui.datepicker.js" />
+    <Content Include="lib\jquery-ui\jquery.ui.dialog.js" />
+    <Content Include="lib\jquery-ui\jquery.ui.draggable.js" />
+    <Content Include="lib\jquery-ui\jquery.ui.droppable.js" />
+    <Content Include="lib\jquery-ui\jquery.ui.effect-blind.js" />
+    <Content Include="lib\jquery-ui\jquery.ui.effect-bounce.js" />
+    <Content Include="lib\jquery-ui\jquery.ui.effect-clip.js" />
+    <Content Include="lib\jquery-ui\jquery.ui.effect-drop.js" />
+    <Content Include="lib\jquery-ui\jquery.ui.effect-explode.js" />
+    <Content Include="lib\jquery-ui\jquery.ui.effect-fade.js" />
+    <Content Include="lib\jquery-ui\jquery.ui.effect-fold.js" />
+    <Content Include="lib\jquery-ui\jquery.ui.effect-highlight.js" />
+    <Content Include="lib\jquery-ui\jquery.ui.effect-pulsate.js" />
+    <Content Include="lib\jquery-ui\jquery.ui.effect-scale.js" />
+    <Content Include="lib\jquery-ui\jquery.ui.effect-shake.js" />
+    <Content Include="lib\jquery-ui\jquery.ui.effect-slide.js" />
+    <Content Include="lib\jquery-ui\jquery.ui.effect-transfer.js" />
+    <Content Include="lib\jquery-ui\jquery.ui.effect.js" />
+    <Content Include="lib\jquery-ui\jquery.ui.menu.js" />
+    <Content Include="lib\jquery-ui\jquery.ui.mouse.js" />
+    <Content Include="lib\jquery-ui\jquery.ui.position.js" />
+    <Content Include="lib\jquery-ui\jquery.ui.progressbar.js" />
+    <Content Include="lib\jquery-ui\jquery.ui.resizable.js" />
+    <Content Include="lib\jquery-ui\jquery.ui.selectable.js" />
+    <Content Include="lib\jquery-ui\jquery.ui.slider.js" />
+    <Content Include="lib\jquery-ui\jquery.ui.sortable.js" />
+    <Content Include="lib\jquery-ui\jquery.ui.spinner.js" />
+    <Content Include="lib\jquery-ui\jquery.ui.tabs.js" />
+    <Content Include="lib\jquery-ui\jquery.ui.tooltip.js" />
+    <Content Include="lib\jquery-ui\jquery.ui.widget.js" />
+    <Content Include="lib\jquery-ui\minified\i18n\jquery-ui-i18n.min.js" />
+    <Content Include="lib\jquery-ui\minified\i18n\jquery.ui.datepicker-af.min.js" />
+    <Content Include="lib\jquery-ui\minified\i18n\jquery.ui.datepicker-ar-DZ.min.js" />
+    <Content Include="lib\jquery-ui\minified\i18n\jquery.ui.datepicker-ar.min.js" />
+    <Content Include="lib\jquery-ui\minified\i18n\jquery.ui.datepicker-az.min.js" />
+    <Content Include="lib\jquery-ui\minified\i18n\jquery.ui.datepicker-be.min.js" />
+    <Content Include="lib\jquery-ui\minified\i18n\jquery.ui.datepicker-bg.min.js" />
+    <Content Include="lib\jquery-ui\minified\i18n\jquery.ui.datepicker-bs.min.js" />
+    <Content Include="lib\jquery-ui\minified\i18n\jquery.ui.datepicker-ca.min.js" />
+    <Content Include="lib\jquery-ui\minified\i18n\jquery.ui.datepicker-cs.min.js" />
+    <Content Include="lib\jquery-ui\minified\i18n\jquery.ui.datepicker-cy-GB.min.js" />
+    <Content Include="lib\jquery-ui\minified\i18n\jquery.ui.datepicker-da.min.js" />
+    <Content Include="lib\jquery-ui\minified\i18n\jquery.ui.datepicker-de.min.js" />
+    <Content Include="lib\jquery-ui\minified\i18n\jquery.ui.datepicker-el.min.js" />
+    <Content Include="lib\jquery-ui\minified\i18n\jquery.ui.datepicker-en-AU.min.js" />
+    <Content Include="lib\jquery-ui\minified\i18n\jquery.ui.datepicker-en-GB.min.js" />
+    <Content Include="lib\jquery-ui\minified\i18n\jquery.ui.datepicker-en-NZ.min.js" />
+    <Content Include="lib\jquery-ui\minified\i18n\jquery.ui.datepicker-eo.min.js" />
+    <Content Include="lib\jquery-ui\minified\i18n\jquery.ui.datepicker-es.min.js" />
+    <Content Include="lib\jquery-ui\minified\i18n\jquery.ui.datepicker-et.min.js" />
+    <Content Include="lib\jquery-ui\minified\i18n\jquery.ui.datepicker-eu.min.js" />
+    <Content Include="lib\jquery-ui\minified\i18n\jquery.ui.datepicker-fa.min.js" />
+    <Content Include="lib\jquery-ui\minified\i18n\jquery.ui.datepicker-fi.min.js" />
+    <Content Include="lib\jquery-ui\minified\i18n\jquery.ui.datepicker-fo.min.js" />
+    <Content Include="lib\jquery-ui\minified\i18n\jquery.ui.datepicker-fr-CA.min.js" />
+    <Content Include="lib\jquery-ui\minified\i18n\jquery.ui.datepicker-fr-CH.min.js" />
+    <Content Include="lib\jquery-ui\minified\i18n\jquery.ui.datepicker-fr.min.js" />
+    <Content Include="lib\jquery-ui\minified\i18n\jquery.ui.datepicker-gl.min.js" />
+    <Content Include="lib\jquery-ui\minified\i18n\jquery.ui.datepicker-he.min.js" />
+    <Content Include="lib\jquery-ui\minified\i18n\jquery.ui.datepicker-hi.min.js" />
+    <Content Include="lib\jquery-ui\minified\i18n\jquery.ui.datepicker-hr.min.js" />
+    <Content Include="lib\jquery-ui\minified\i18n\jquery.ui.datepicker-hu.min.js" />
+    <Content Include="lib\jquery-ui\minified\i18n\jquery.ui.datepicker-hy.min.js" />
+    <Content Include="lib\jquery-ui\minified\i18n\jquery.ui.datepicker-id.min.js" />
+    <Content Include="lib\jquery-ui\minified\i18n\jquery.ui.datepicker-is.min.js" />
+    <Content Include="lib\jquery-ui\minified\i18n\jquery.ui.datepicker-it.min.js" />
+    <Content Include="lib\jquery-ui\minified\i18n\jquery.ui.datepicker-ja.min.js" />
+    <Content Include="lib\jquery-ui\minified\i18n\jquery.ui.datepicker-ka.min.js" />
+    <Content Include="lib\jquery-ui\minified\i18n\jquery.ui.datepicker-kk.min.js" />
+    <Content Include="lib\jquery-ui\minified\i18n\jquery.ui.datepicker-km.min.js" />
+    <Content Include="lib\jquery-ui\minified\i18n\jquery.ui.datepicker-ko.min.js" />
+    <Content Include="lib\jquery-ui\minified\i18n\jquery.ui.datepicker-ky.min.js" />
+    <Content Include="lib\jquery-ui\minified\i18n\jquery.ui.datepicker-lb.min.js" />
+    <Content Include="lib\jquery-ui\minified\i18n\jquery.ui.datepicker-lt.min.js" />
+    <Content Include="lib\jquery-ui\minified\i18n\jquery.ui.datepicker-lv.min.js" />
+    <Content Include="lib\jquery-ui\minified\i18n\jquery.ui.datepicker-mk.min.js" />
+    <Content Include="lib\jquery-ui\minified\i18n\jquery.ui.datepicker-ml.min.js" />
+    <Content Include="lib\jquery-ui\minified\i18n\jquery.ui.datepicker-ms.min.js" />
+    <Content Include="lib\jquery-ui\minified\i18n\jquery.ui.datepicker-nb.min.js" />
+    <Content Include="lib\jquery-ui\minified\i18n\jquery.ui.datepicker-nl-BE.min.js" />
+    <Content Include="lib\jquery-ui\minified\i18n\jquery.ui.datepicker-nl.min.js" />
+    <Content Include="lib\jquery-ui\minified\i18n\jquery.ui.datepicker-nn.min.js" />
+    <Content Include="lib\jquery-ui\minified\i18n\jquery.ui.datepicker-no.min.js" />
+    <Content Include="lib\jquery-ui\minified\i18n\jquery.ui.datepicker-pl.min.js" />
+    <Content Include="lib\jquery-ui\minified\i18n\jquery.ui.datepicker-pt-BR.min.js" />
+    <Content Include="lib\jquery-ui\minified\i18n\jquery.ui.datepicker-pt.min.js" />
+    <Content Include="lib\jquery-ui\minified\i18n\jquery.ui.datepicker-rm.min.js" />
+    <Content Include="lib\jquery-ui\minified\i18n\jquery.ui.datepicker-ro.min.js" />
+    <Content Include="lib\jquery-ui\minified\i18n\jquery.ui.datepicker-ru.min.js" />
+    <Content Include="lib\jquery-ui\minified\i18n\jquery.ui.datepicker-sk.min.js" />
+    <Content Include="lib\jquery-ui\minified\i18n\jquery.ui.datepicker-sl.min.js" />
+    <Content Include="lib\jquery-ui\minified\i18n\jquery.ui.datepicker-sq.min.js" />
+    <Content Include="lib\jquery-ui\minified\i18n\jquery.ui.datepicker-sr-SR.min.js" />
+    <Content Include="lib\jquery-ui\minified\i18n\jquery.ui.datepicker-sr.min.js" />
+    <Content Include="lib\jquery-ui\minified\i18n\jquery.ui.datepicker-sv.min.js" />
+    <Content Include="lib\jquery-ui\minified\i18n\jquery.ui.datepicker-ta.min.js" />
+    <Content Include="lib\jquery-ui\minified\i18n\jquery.ui.datepicker-th.min.js" />
+    <Content Include="lib\jquery-ui\minified\i18n\jquery.ui.datepicker-tj.min.js" />
+    <Content Include="lib\jquery-ui\minified\i18n\jquery.ui.datepicker-tr.min.js" />
+    <Content Include="lib\jquery-ui\minified\i18n\jquery.ui.datepicker-uk.min.js" />
+    <Content Include="lib\jquery-ui\minified\i18n\jquery.ui.datepicker-vi.min.js" />
+    <Content Include="lib\jquery-ui\minified\i18n\jquery.ui.datepicker-zh-CN.min.js" />
+    <Content Include="lib\jquery-ui\minified\i18n\jquery.ui.datepicker-zh-HK.min.js" />
+    <Content Include="lib\jquery-ui\minified\i18n\jquery.ui.datepicker-zh-TW.min.js" />
+    <Content Include="lib\jquery-ui\minified\jquery-ui.min.js" />
+    <Content Include="lib\jquery-ui\minified\jquery.ui.accordion.min.js" />
+    <Content Include="lib\jquery-ui\minified\jquery.ui.autocomplete.min.js" />
+    <Content Include="lib\jquery-ui\minified\jquery.ui.button.min.js" />
+    <Content Include="lib\jquery-ui\minified\jquery.ui.core.min.js" />
+    <Content Include="lib\jquery-ui\minified\jquery.ui.datepicker.min.js" />
+    <Content Include="lib\jquery-ui\minified\jquery.ui.dialog.min.js" />
+    <Content Include="lib\jquery-ui\minified\jquery.ui.draggable.min.js" />
+    <Content Include="lib\jquery-ui\minified\jquery.ui.droppable.min.js" />
+    <Content Include="lib\jquery-ui\minified\jquery.ui.effect-blind.min.js" />
+    <Content Include="lib\jquery-ui\minified\jquery.ui.effect-bounce.min.js" />
+    <Content Include="lib\jquery-ui\minified\jquery.ui.effect-clip.min.js" />
+    <Content Include="lib\jquery-ui\minified\jquery.ui.effect-drop.min.js" />
+    <Content Include="lib\jquery-ui\minified\jquery.ui.effect-explode.min.js" />
+    <Content Include="lib\jquery-ui\minified\jquery.ui.effect-fade.min.js" />
+    <Content Include="lib\jquery-ui\minified\jquery.ui.effect-fold.min.js" />
+    <Content Include="lib\jquery-ui\minified\jquery.ui.effect-highlight.min.js" />
+    <Content Include="lib\jquery-ui\minified\jquery.ui.effect-pulsate.min.js" />
+    <Content Include="lib\jquery-ui\minified\jquery.ui.effect-scale.min.js" />
+    <Content Include="lib\jquery-ui\minified\jquery.ui.effect-shake.min.js" />
+    <Content Include="lib\jquery-ui\minified\jquery.ui.effect-slide.min.js" />
+    <Content Include="lib\jquery-ui\minified\jquery.ui.effect-transfer.min.js" />
+    <Content Include="lib\jquery-ui\minified\jquery.ui.effect.min.js" />
+    <Content Include="lib\jquery-ui\minified\jquery.ui.menu.min.js" />
+    <Content Include="lib\jquery-ui\minified\jquery.ui.mouse.min.js" />
+    <Content Include="lib\jquery-ui\minified\jquery.ui.position.min.js" />
+    <Content Include="lib\jquery-ui\minified\jquery.ui.progressbar.min.js" />
+    <Content Include="lib\jquery-ui\minified\jquery.ui.resizable.min.js" />
+    <Content Include="lib\jquery-ui\minified\jquery.ui.selectable.min.js" />
+    <Content Include="lib\jquery-ui\minified\jquery.ui.slider.min.js" />
+    <Content Include="lib\jquery-ui\minified\jquery.ui.sortable.min.js" />
+    <Content Include="lib\jquery-ui\minified\jquery.ui.spinner.min.js" />
+    <Content Include="lib\jquery-ui\minified\jquery.ui.tabs.min.js" />
+    <Content Include="lib\jquery-ui\minified\jquery.ui.tooltip.min.js" />
+    <Content Include="lib\jquery-ui\minified\jquery.ui.widget.min.js" />
+    <Content Include="lib\jquery-ui\themes\base\images\animated-overlay.gif" />
+    <Content Include="lib\jquery-ui\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="lib\jquery-ui\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="lib\jquery-ui\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="lib\jquery-ui\themes\base\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="lib\jquery-ui\themes\base\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="lib\jquery-ui\themes\base\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="lib\jquery-ui\themes\base\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="lib\jquery-ui\themes\base\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="lib\jquery-ui\themes\base\images\ui-icons_222222_256x240.png" />
+    <Content Include="lib\jquery-ui\themes\base\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="lib\jquery-ui\themes\base\images\ui-icons_454545_256x240.png" />
+    <Content Include="lib\jquery-ui\themes\base\images\ui-icons_888888_256x240.png" />
+    <Content Include="lib\jquery-ui\themes\base\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="lib\jquery-ui\themes\base\jquery-ui.css" />
+    <Content Include="lib\jquery-ui\themes\base\jquery.ui.accordion.css" />
+    <Content Include="lib\jquery-ui\themes\base\jquery.ui.all.css" />
+    <Content Include="lib\jquery-ui\themes\base\jquery.ui.autocomplete.css" />
+    <Content Include="lib\jquery-ui\themes\base\jquery.ui.base.css" />
+    <Content Include="lib\jquery-ui\themes\base\jquery.ui.button.css" />
+    <Content Include="lib\jquery-ui\themes\base\jquery.ui.core.css" />
+    <Content Include="lib\jquery-ui\themes\base\jquery.ui.datepicker.css" />
+    <Content Include="lib\jquery-ui\themes\base\jquery.ui.dialog.css" />
+    <Content Include="lib\jquery-ui\themes\base\jquery.ui.menu.css" />
+    <Content Include="lib\jquery-ui\themes\base\jquery.ui.progressbar.css" />
+    <Content Include="lib\jquery-ui\themes\base\jquery.ui.resizable.css" />
+    <Content Include="lib\jquery-ui\themes\base\jquery.ui.selectable.css" />
+    <Content Include="lib\jquery-ui\themes\base\jquery.ui.slider.css" />
+    <Content Include="lib\jquery-ui\themes\base\jquery.ui.spinner.css" />
+    <Content Include="lib\jquery-ui\themes\base\jquery.ui.tabs.css" />
+    <Content Include="lib\jquery-ui\themes\base\jquery.ui.theme.css" />
+    <Content Include="lib\jquery-ui\themes\base\jquery.ui.tooltip.css" />
+    <Content Include="lib\jquery-ui\themes\base\minified\images\animated-overlay.gif" />
+    <Content Include="lib\jquery-ui\themes\base\minified\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="lib\jquery-ui\themes\base\minified\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="lib\jquery-ui\themes\base\minified\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="lib\jquery-ui\themes\base\minified\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="lib\jquery-ui\themes\base\minified\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="lib\jquery-ui\themes\base\minified\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="lib\jquery-ui\themes\base\minified\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="lib\jquery-ui\themes\base\minified\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="lib\jquery-ui\themes\base\minified\images\ui-icons_222222_256x240.png" />
+    <Content Include="lib\jquery-ui\themes\base\minified\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="lib\jquery-ui\themes\base\minified\images\ui-icons_454545_256x240.png" />
+    <Content Include="lib\jquery-ui\themes\base\minified\images\ui-icons_888888_256x240.png" />
+    <Content Include="lib\jquery-ui\themes\base\minified\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="lib\jquery-ui\themes\base\minified\jquery-ui.min.css" />
+    <Content Include="lib\jquery-ui\themes\base\minified\jquery.ui.accordion.min.css" />
+    <Content Include="lib\jquery-ui\themes\base\minified\jquery.ui.autocomplete.min.css" />
+    <Content Include="lib\jquery-ui\themes\base\minified\jquery.ui.button.min.css" />
+    <Content Include="lib\jquery-ui\themes\base\minified\jquery.ui.core.min.css" />
+    <Content Include="lib\jquery-ui\themes\base\minified\jquery.ui.datepicker.min.css" />
+    <Content Include="lib\jquery-ui\themes\base\minified\jquery.ui.dialog.min.css" />
+    <Content Include="lib\jquery-ui\themes\base\minified\jquery.ui.menu.min.css" />
+    <Content Include="lib\jquery-ui\themes\base\minified\jquery.ui.progressbar.min.css" />
+    <Content Include="lib\jquery-ui\themes\base\minified\jquery.ui.resizable.min.css" />
+    <Content Include="lib\jquery-ui\themes\base\minified\jquery.ui.selectable.min.css" />
+    <Content Include="lib\jquery-ui\themes\base\minified\jquery.ui.slider.min.css" />
+    <Content Include="lib\jquery-ui\themes\base\minified\jquery.ui.spinner.min.css" />
+    <Content Include="lib\jquery-ui\themes\base\minified\jquery.ui.tabs.min.css" />
+    <Content Include="lib\jquery-ui\themes\base\minified\jquery.ui.theme.min.css" />
+    <Content Include="lib\jquery-ui\themes\base\minified\jquery.ui.tooltip.min.css" />
+    <Content Include="lib\jquery-ui\themes\bootstrap\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="lib\jquery-ui\themes\bootstrap\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="lib\jquery-ui\themes\bootstrap\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="lib\jquery-ui\themes\bootstrap\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="lib\jquery-ui\themes\bootstrap\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="lib\jquery-ui\themes\bootstrap\images\ui-bg_glass_75_ffffff_1x400.png" />
+    <Content Include="lib\jquery-ui\themes\bootstrap\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="lib\jquery-ui\themes\bootstrap\images\ui-bg_inset-soft_95_fef1ec_1x100.png" />
+    <Content Include="lib\jquery-ui\themes\bootstrap\images\ui-icons_222222_256x240.png" />
+    <Content Include="lib\jquery-ui\themes\bootstrap\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="lib\jquery-ui\themes\bootstrap\images\ui-icons_454545_256x240.png" />
+    <Content Include="lib\jquery-ui\themes\bootstrap\images\ui-icons_888888_256x240.png" />
+    <Content Include="lib\jquery-ui\themes\bootstrap\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="lib\jquery-ui\themes\bootstrap\images\ui-icons_f6cf3b_256x240.png" />
+    <Content Include="lib\jquery-ui\themes\bootstrap\jquery-ui-1.10.0.custom.css" />
+    <Content Include="lib\jquery-ui\themes\bootstrap\jquery-ui-1.9.2.custom.css" />
+    <Content Include="lib\jquery-ui\themes\bootstrap\jquery.ui.1.10.0.ie.css" />
+    <Content Include="lib\jquery-ui\themes\bootstrap\jquery.ui.1.9.2.ie.css" />
+    <Content Include="lib\jquery\jquery.js" />
+    <Content Include="lib\moment\moment-with-langs.js" />
+    <Content Include="lib\pqgrid\images\cross.png" />
+    <Content Include="lib\pqgrid\images\horiz-bg.png" />
+    <Content Include="lib\pqgrid\images\horiz-slider-bg.png" />
+    <Content Include="lib\pqgrid\images\loading.gif" />
+    <Content Include="lib\pqgrid\images\page-first-gray.gif" />
+    <Content Include="lib\pqgrid\images\page-last-gray.gif" />
+    <Content Include="lib\pqgrid\images\page-next-gray.gif" />
+    <Content Include="lib\pqgrid\images\page-prev-gray.gif" />
+    <Content Include="lib\pqgrid\images\Refresh.gif" />
+    <Content Include="lib\pqgrid\images\sort_asc.gif" />
+    <Content Include="lib\pqgrid\images\sort_desc.gif" />
+    <Content Include="lib\pqgrid\images\sprite.png" />
+    <Content Include="lib\pqgrid\images\tick.png" />
+    <Content Include="lib\pqgrid\images\vert-bg.png" />
+    <Content Include="lib\pqgrid\images\vert-slider-bg.png" />
+    <Content Include="lib\pqgrid\index.htm" />
+    <Content Include="lib\pqgrid\pqgrid.dev.css" />
+    <Content Include="lib\pqgrid\pqgrid.dev.js" />
+    <Content Include="lib\pqgrid\pqgrid.min.css" />
+    <Content Include="lib\pqgrid\pqgrid.min.js" />
+    <Content Include="lib\pqgrid\themes\Office\images\column-header-bg.png" />
+    <Content Include="lib\pqgrid\themes\Office\images\column-header-over-bg.gif" />
+    <Content Include="lib\pqgrid\themes\Office\pqgrid.css" />
+    <Content Include="lib\select2\select2-bootstrap.css" />
+    <Content Include="lib\select2\select2-spinner.gif" />
+    <Content Include="lib\select2\select2.css" />
+    <Content Include="lib\select2\select2.js" />
+    <Content Include="lib\select2\select2.png" />
+    <Content Include="lib\select2\select2x2.png" />
+    <Content Include="lib\toastr\toastr.css" />
+    <Content Include="lib\toastr\toastr.js" />
+    <Content Include="lib\toastr\toastr.min.css" />
+    <Content Include="lib\toastr\toastr.min.js" />
+    <Content Include="partials\dialogtest.html" />
+    <Content Include="partials\simpleModal.html" />
+    <Content Include="partials\uploadtest.html" />
+    <Content Include="style\bootstrap.css" />
+    <Content Include="style\warpper.css" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Content\Site.css" />
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Files\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Ashx\UploadHandler.ashx" />
+    <Content Include="Ashx\UserJsHandler.ashx" />
+    <None Include="images\_notes\bt_btn_nav.png.mno" />
+    <None Include="lib\angular\angular-animate.min.js.map" />
+    <None Include="lib\angular\angular-cookies.min.js.map" />
+    <None Include="lib\angular\angular-loader.min.js.map" />
+    <None Include="lib\angular\angular-resource.min.js.map" />
+    <None Include="lib\angular\angular-route.min.js.map" />
+    <None Include="lib\angular\angular-sanitize.min.js.map" />
+    <None Include="lib\angular\angular-touch.min.js.map" />
+    <None Include="lib\angular\angular.min.js.map" />
+    <None Include="lib\angular\errors.json" />
+    <None Include="lib\angular\version.json" />
+    <None Include="lib\jquery-ui\.jshintrc" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>26273</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>
