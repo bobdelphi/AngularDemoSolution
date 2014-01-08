@@ -125,6 +125,7 @@
     <Compile Include="Ashx\UserJsHandler.ashx.cs">
       <DependentUpon>UserJsHandler.ashx</DependentUpon>
     </Compile>
+    <Compile Include="Controllers\CSVController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="Global.asax.cs">
@@ -137,6 +138,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="favicon.ico" />
+    <Content Include="Files\dept.txt" />
     <Content Include="Global.asax" />
     <Content Include="images\arrow.png" />
     <Content Include="images\bg_btn.png" />
@@ -820,7 +822,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Files\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
