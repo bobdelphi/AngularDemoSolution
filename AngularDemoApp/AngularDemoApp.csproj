@@ -161,7 +161,6 @@
     <Content Include="images\infoicon.png" />
     <Content Include="images\input_icon.png" />
     <Content Include="images\login_shadow.png" />
-    <Content Include="images\logo.png" />
     <Content Include="images\nav2.png" />
     <Content Include="images\navbtn.png" />
     <Content Include="images\nav_btn2.png" />
