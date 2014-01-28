@@ -445,6 +445,7 @@
     <Content Include="lib\angular\i18n\angular-locale_zu-za.js" />
     <Content Include="lib\angular\i18n\angular-locale_zu.js" />
     <Content Include="lib\angular\version.txt" />
+    <Content Include="lib\easyui\jquery.easyui.min.js" />
     <Content Include="lib\jquery-file-upload\app.js" />
     <Content Include="lib\jquery-file-upload\cors\jquery.postmessage-transport.js" />
     <Content Include="lib\jquery-file-upload\cors\jquery.xdr-transport.js" />
