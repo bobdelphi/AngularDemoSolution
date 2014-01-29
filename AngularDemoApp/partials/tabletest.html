@@ -1,49 +1,16 @@
-﻿<button ng-click="tableParams.reload()" class="btn btn-default">
-    Reload</button>
-<button ng-click="tableParams.sorting({})" class="btn btn-default">
-    Clear sorting</button>
-<div class="clearfix">
+﻿<button ng-click="refresh()" class="btn btn-default">
+    Refresh</button>
+
+
+
+<!--<div ez-grid="param">
+    <div column field='ID' title='ID' sortable='true' />
+    <div column title='Name' field='Name' width='400' sortable='true' />
+  
 </div>
-<div loading-container="tableParams.settings().$loading">
-    <table ng-table="tableParams"  class="table">
-        <tbody>
-            <tr ng-repeat="mail in $data">
-                <td style="width:400px" data-title="'Subject'">
-                    {{mail.Subject1}}
-                </td>
-                <td style="width:200px" data-title="'To'">
-                    {{mail.To1}}
-                </td>
-                 <td data-title="'MailType'">
-                    {{mail.MailType}}
-                </td>
-                <td data-title="'Create Date'">
-                    {{mail.Createdatetime}}
-                </td>
-            </tr>
-        </tbody>
-    </table>
+    -->
 </div>
 
-<!--
 
-           { field: 'ID', title: 'ID', width: 100, hidden: true },
-                { field: 'Subject1', title: 'Subject', width: 400, sortable: "true" },
-                { field: 'To1', title: 'Mail To', width: 200, sortable: "true" },
-                { field: 'Cc1', title: 'CC', width: 100, sortable: "true" },
-                { field: 'MailType', title: 'Mail Type', width: 100, sortable: "true" },
-                { field: 'Createdatetime', title: 'Send Date', width: 100, sortable: "true" }
-
-<div class="bs-example">
-      <ul class="pagination">
-        <li><a href="#">«</a></li>
-        <li><a href="#">1</a></li>
-        <li><a href="#">2</a></li>
-        <li><a href="#">3</a></li>
-        <li><a href="#">4</a></li>
-        <li><a href="#">5</a></li>
-        <li><a href="#">»</a></li>
-      </ul>
-    </div>-->
 
 
