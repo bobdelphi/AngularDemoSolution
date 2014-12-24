@@ -5,6 +5,8 @@
 angular.module('ngApp', [
 'ui.date',
 'ui.select2',
+//'ngGrid',
+  'ngTable',
   'ngRoute',
   'blueimp.fileupload',
   'fundoo.services',
